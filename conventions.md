@@ -6,7 +6,7 @@ VB 폼 1개 = **4개 파일 + 1줄 편집**:
 
 1. `wcf/<name>.py` — WCF 래퍼 (`call_procedure` 사용)
 2. `blueprints/<name>.py` — 라우트/서버 로직. **`FORM_IDS = ["VB_FORM_ID"]` 선언** (대문자 VB 폼ID)
-3. `templates/<name>.html` — `{% extends "_base.html" %}`
+3. `templates/<name>.html` — {% raw %}`{% extends "_base.html" %}`{% endraw %}
 4. `blueprints/__init__.py`의 `_FORM_MODULES` 리스트에 모듈 한 줄 추가
 
 `FORM_IDS`만 선언하면 `/portal/navigate/<form_id>` → url_prefix 매핑이 자동 생성됩니다 (VB `NavigateTo` 미러).
