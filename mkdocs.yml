@@ -1,0 +1,92 @@
+site_name: PortalSNKOWeb · 개발자 문서
+site_description: Sinokor SHMS → Flask + DevExtreme 포팅 프로젝트 개발 가이드
+site_url: https://sinokorofficial.github.io/PortalSNKOWeb-docs/
+
+repo_name: PortalSNKOWeb-docs
+repo_url: https://github.com/SinokorOfficial/PortalSNKOWeb-docs
+
+docs_dir: docs
+
+nav:
+  - 홈: index.md
+  - 시작하기: getting-started.md
+  - 시스템:
+      - 아키텍처: architecture.md
+      - 디렉토리 구조: directory-structure.md
+  - 레퍼런스:
+      - 라우트 레퍼런스: routes.md
+      - 프론트엔드: frontend.md
+      - 리포트 시스템: reports.md
+  - 개발 규약과 트랩: conventions.md
+
+theme:
+  name: material
+  language: ko
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: black
+      accent: green
+      toggle:
+        icon: material/weather-night
+        name: 다크 모드로
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: green
+      toggle:
+        icon: material/weather-sunny
+        name: 라이트 모드로
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.path
+    - navigation.indexes
+    - navigation.top
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.tabs.link
+  font:
+    text: Pretendard
+    code: JetBrains Mono
+  icon:
+    repo: fontawesome/brands/github
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: ¶
+      toc_depth: 3
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+extra:
+  social:
+    - icon: fontawesome/solid/envelope
+      link: mailto:khkang@sinokor.co.kr
+      name: 문의 (IT-Team)
+
+copyright: 장금상선 IT-Team
